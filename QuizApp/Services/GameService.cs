@@ -13,8 +13,9 @@ namespace QuizApp.Services
             _questionRepository = questionRepository;
         }
 
-        public Player SubmitQuiz()
+        public Player SubmitQuiz(SubmitModel submitModel)
         {
+            //Logic
             throw new NotImplementedException();
         }
     }

@@ -4,6 +4,6 @@ namespace QuizApp.Services
 {
     public interface IGameService
     {
-        Player SubmitQuiz();
+        Player SubmitQuiz(SubmitModel submitModel);
     }
 }

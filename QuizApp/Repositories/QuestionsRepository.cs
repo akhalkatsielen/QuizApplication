@@ -15,6 +15,12 @@ namespace QuizApp.Repositories
         {
            return _context.Questions.Include("Answers").ToList();
         }
+        public List<Answer> GetAnswersByIds(List<int> ids)
+        {
+            return _context.Answers
+                .Where(x => ids.Contains(x.Id))
+                .ToList();
+        }
 
         public Question AddQuestion(Question question)
         {

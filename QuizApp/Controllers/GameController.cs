@@ -21,8 +21,9 @@ namespace QuizApp.Controllers
             return View("Quiz", questions);
         }
         [HttpPost]
-        public IActionResult SubmitQuiz()
+        public IActionResult SubmitQuiz(SubmitModel submitModel)
         {
+            var player = _gameService.SubmitQuiz(submitModel);
             return RedirectToAction("StartQuiz");
         }
     }
